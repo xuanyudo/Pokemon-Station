@@ -60,13 +60,19 @@
     margin-right: 20px;
 }
 #my-container{
+    background-image: url("../imgs/background.jpg");
+    background-position:center;
+    height: 1000px;
+}
+#cover-all{
+    position: absolute;
+    width: 100%;
     background-image:linear-gradient(to bottom, rgba(189, 191, 192, 0) 0%, #fdfafa 90%);
-    max-height: 1000px;
-    
+    height: 1000px;
 }
 #inner-container{
     position: absolute;
-    bottom:30%;
+    top:55%;
     
 }
 #inner-container h1{
