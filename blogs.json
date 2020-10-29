@@ -1,0 +1,10 @@
+{
+    "blogs": [
+        {
+            "title": "Pikachu",
+            "detail": "something",
+            "image": "./imgs/025Pikachu.png",
+            "date": "2014-01-01T23:28:56.782Z"
+        }
+    ]
+}
