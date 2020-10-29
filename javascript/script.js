@@ -236,6 +236,61 @@ var post_new = function(btn){
     new_blog.appendChild(div3);
     new_blog.appendChild(div4);
     blog_space.insertBefore(new_blog,blog_space.children[0]);
+}
 
+var verifyForm = function(){
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var feedback = document.getElementById("feedback").value;
+    var regx = /^.+@.+$/g;
+    var success = true;
+    if(name==""){
+        if(document.getElementById("nameHelp").classList.contains("d-none")){
+            document.getElementById("nameHelp").classList.toggle("d-none");
+        }
+        success = false;
+    }else{
+        if(!document.getElementById("nameHelp").classList.contains("d-none")){
+            document.getElementById("nameHelp").classList.toggle("d-none");
+        }
+    }
+    if(feedback==""){
+        if(document.getElementById("feedbackHelp").classList.contains("d-none")){
+            document.getElementById("feedbackHelp").classList.toggle("d-none");
+        }
+        success = false;
+    }else{
+        if(!document.getElementById("feedbackHelp").classList.contains("d-none")){
+            document.getElementById("feedbackHelp").classList.toggle("d-none");
+        }
+    }
+    if(email=="" || !regx.test(email)){
+        if(document.getElementById("emailHelp").classList.contains("d-none")){
+            document.getElementById("emailHelp").classList.toggle("d-none");
+        }
+        success = false;
+    }else{
+        if(!document.getElementById("emailHelp").classList.contains("d-none")){
+            document.getElementById("emailHelp").classList.toggle("d-none");
+        }
+    }
+    if(!success){
+        if(document.getElementById("failure").classList.contains("d-none")){
+            document.getElementById("failure").classList.toggle("d-none");
+        }
+        if(!document.getElementById("success").classList.contains("d-none")){
+            document.getElementById("success").classList.toggle("d-none");
+        }
+    }else{
+        if(!document.getElementById("failure").classList.contains("d-none")){
+            document.getElementById("failure").classList.toggle("d-none");
+        }
+        if(document.getElementById("success").classList.contains("d-none")){
+            document.getElementById("success").classList.toggle("d-none");
+            document.getElementById("name").value="";
+            document.getElementById("email").value="";
+            document.getElementById("feedback").value="";
+        }
+    }
 }
 

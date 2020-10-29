@@ -27,7 +27,7 @@
                     <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutMe.html">About Us</a>
+                    <a class="nav-link" href="aboutMe.html">About Me</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="blog.html">Blog</a>
@@ -44,7 +44,35 @@
         <h1 class="text-center"> Contact Us</h1>
         <h6 class="text-muted text-center">--- Feel free to reach out to me for feedback ---</h6>
         <div class="outer-container">
-            
+            <form class="p-20" action="javascript:void(0);">
+                <div id="success" class="alert alert-success d-none" role="alert">
+                    Your feedback has successfully submit! We will contact you regarding your message.
+                </div>
+                <div id="failure" class="alert alert-danger d-none" role="alert">
+                    Your feedback submission fail. Check your input please...
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name...">
+                    <small id="nameHelp" class="form-text text-danger d-none">Your name is empty</small>
+                  </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-danger d-none">please make sure you type correct email format</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback">Feedback:</label>
+                    <textarea class="form-control" id="feedback" rows="3"></textarea>
+                    <small id="feedbackHelp" class="form-text text-danger d-none">Your feedback is empty, please type something...</small>
+                  </div>
+                <div class="form-group d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary" onclick="verifyForm()" style="margin-right: 5px;">Submit</a>
+                    <input type="reset" class="btn btn-danger" style="margin-left: 5px;" >
+                </div>
+                
+              </form>
         </div>
 
     </div>

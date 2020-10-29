@@ -82,8 +82,14 @@
     max-width: 480px;
     width: 100%;
     /* min-width: 480px; */
-    min-height: 600px;
+    min-height: 380px;
     margin: 0 auto;
+}
+.alert-success{
+    box-shadow: 0 0 10px 5px #c3e6cb;
+}
+.alert-danger{
+    box-shadow: 0 0 10px 5px #f5c6cb;
 }
 
 #about-me, #contact-us{
@@ -100,6 +106,16 @@
     color: lightyellow;
 }
 
+#about-me p{
+    font-family: cursive;
+}
+
+.p-10{
+    padding: 10px;
+}
+.p-20{
+    padding: 20px;
+}
 
 #about-me .outer-container,#contact-us .outer-container{
     position: relative;
