@@ -115,14 +115,18 @@ var checkAll = function(){
     if(success){
         
         var file = document.getElementById("file").files[0];
-        console.log(file);
-        file = `./imgs/${file.name}`;
+        var reader = new FileReader();
+        var filename = "";
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+            filename = e.target.result;
+            var blog = createBlog(title,detail,filename,date);
+            var blog_space = document.getElementById("blog-post");
+            blog_space.removeChild(blog_space.children[0]);
+            blog_space.appendChild(blog);
+            document.getElementById("post").disabled = false;
+        }  
         
-        var blog = createBlog(title,detail,file,date);
-        var blog_space = document.getElementById("blog-post");
-        blog_space.removeChild(blog_space.children[0]);
-        blog_space.appendChild(blog);
-        document.getElementById("post").disabled = false;
     }
 
     return false;
@@ -132,6 +136,7 @@ var cancelAction = function(){
         blog_space.removeChild(blog_space.children[0]);
         document.getElementById("post").disabled = false;
 }
+
 
 
 var post_new = function(btn){
@@ -185,6 +190,8 @@ var post_new = function(btn){
     input2.accept = ".jpg, .jpeg, .png";
     input2.setAttribute("id","file");
 
+    
+
     var file_error = document.createElement("small");
     file_error.id = "file-error";
     file_error.innerText = "You need one image for posting image";
@@ -193,7 +200,7 @@ var post_new = function(btn){
     
     var file_help = document.createElement("small");
     file_help.id = "file-help";
-    file_help.innerText = "Upload function is not support currently, only support image under imgs folder...";
+    file_help.innerText = "Upload only support .png, .jpg, .jepg format...";
     file_help.classList.add("text-muted");
     // file_help.classList.add("d-none");
 
