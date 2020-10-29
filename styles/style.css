@@ -86,9 +86,24 @@
     margin: 0 auto;
 }
 
+#about-me, #contact-us{
+    padding-top: 50px;
+}
+#about-me h1, #contact-us h1{
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 3px 8px #fdfafa;
+}
+#about-me h1{
+    color: darkred;
+}
+#contact-us h1{
+    color: lightyellow;
+}
+
+
 #about-me .outer-container,#contact-us .outer-container{
     position: relative;
-    top:50px;
+    top: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 45px;
     box-shadow: 0 0 5px 6px gray;
