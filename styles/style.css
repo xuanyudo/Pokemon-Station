@@ -74,7 +74,8 @@
 }
 .outer-container{
     max-width: 480px;
-    min-width: 480px;
+    width: 100%;
+    /* min-width: 480px; */
     min-height: 600px;
     margin: 0 auto;
 }
@@ -270,7 +271,7 @@
 }
 
 #blog .outer-container{
-    min-width: 480px;
+    /* min-width: 480px; */
     max-width: 980px;
     min-height: 600px;
     background-color: rgb(255, 255, 255);
