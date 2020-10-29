@@ -125,6 +125,7 @@ var checkAll = function(){
             blog_space.removeChild(blog_space.children[0]);
             blog_space.appendChild(blog);
             document.getElementById("post").disabled = false;
+            window.scroll(0,1000000);
         }  
         
     }
